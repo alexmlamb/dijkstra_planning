@@ -154,9 +154,11 @@ if __name__ == "__main__":
     #Initially get it to take random action, then try to get it to reach a goal.  
     #action, state_dict = get_action(screenshot=None, page_navigation_actions=allowed_actions[start_state], direct_ui_actions=[], state_dict=state_dict, action_id=None)
 
-    for j in range(0, 2000000):
+    random_policy = True
+
+    for j in range(0, 20000000):
         
-        if True:
+        if random_policy:
             action = random.choice(allowed_actions[start_state])
         else:
             action, state_dict = get_action(screenshot=None, page_navigation_actions=allowed_actions[start_state], direct_ui_actions=[], state_dict=state_dict, action_id=None)
